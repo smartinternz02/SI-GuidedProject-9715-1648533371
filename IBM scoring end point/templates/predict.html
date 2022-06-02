@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+Predictions
+{% endblock %}
+{% block content %}
+<div class="predInfo">
+    <form method="POST">
+        <div class="infoForm">
+            <label for="result" ><span class="predValue">{{y}}</label><br></span>
+            <label for="cloudCover"> Cloud Cover </label>
+            <input type="text" class="form-control" id="cloudCover" name="cloudCover" placeholder="Cloud Cover Percentage (%)">
+            <label for="aRain"> Annual Rainfall </label>
+            <input type="text" class="form-control" id="aRain" name="aRain" placeholder="Annual Rainfall in mm">
+            <label for="jfRain"> Jan-Feb Rainfall </label>
+            <input type="text" class="form-control" id="jfRain" name="jfRain" placeholder="Jan-Feb Rainfall in mm">
+            <label for="mmRain"> March-May Rainfall </label>
+            <input type="text" class="form-control" id="mmRain" name="mmRain" placeholder="March-May Rainfall in mm">
+            <label for="jsRain"> June-September Rainfall </label>
+            <input type="text" class="form-control" id="jsRain" name="jsRain" placeholder="June-September Rainfall in mm">
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </div> 
+    </form>
+</div>
+{% endblock %}
